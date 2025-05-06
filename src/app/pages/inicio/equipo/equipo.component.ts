@@ -11,40 +11,33 @@ export class EquipoComponent {
 
   teamMembers = [
     {
-      name: 'Acevedo Villaena Dylan',
-      age: 19,
-      role: 'Desarrollador',
-      study: 'Ingeniería de Computación y Sistemas',
-      image: 'assets/images/dylan.jpg'
-    },
-    {
-      name: 'Aguilar Blass Javier',
-      age: 19,
-      role: 'Desarrollador',
-      study: 'Ingeniería de Computación y Sistemas',
-      image: 'assets/images/javier.jpg'
-    },
-    {
-      name: 'Escobar Gomez Miguel',
-      age: 18,
-      role: 'Desarrollador',
-      study: 'Ingeniería de Computación y Sistemas',
-      image: 'assets/images/miguel.jpg'
-    },
-    {
-      name: 'Guevara Villalbos Gino',
+      name: 'Carlos Morales Chunga',
       age: 20,
       role: 'Desarrollador',
-      study: 'Ingeniería de Computación y Sistemas',
-      image: 'assets/images/gino.jpg'
+      study: 'Ingeniería de Sistemas e IA',
+      image: 'https://media-lim1-1.cdn.whatsapp.net/v/t61.24694-24/491876693_3924918327747330_987449440952253616_n.jpg?ccb=11-4&oh=01_Q5Aa1QHugvJqAKNXPGfy557weu0gbz48ZITwYqZE2oD23Jxg5g&oe=68277B8E&_nc_sid=5e03e0&_nc_cat=109'
     },
     {
-      name: 'Palomino Cuenca Jaime',
+      name: 'Miguel Escobar',
       age: 19,
       role: 'Desarrollador',
-      study: 'Ingeniería de Computación y Sistemas',
-      image: 'assets/images/jaime.jpg'
-    }
+      study: 'Ingeniería de Ingeniería de Sistemas e IA',
+      image: 'https://static.upao.edu.pe/upload/f1/000259967.jpg'
+    },
+    {
+      name: 'Oscar Llaure',
+      age: 21,
+      role: 'Desarrollador',
+      study: 'Ingeniería de Ingeniería de Sistemas e IA',
+      image: 'https://static.upao.edu.pe/upload/f1/000264553.jpg'
+    },
+    {
+      name: 'Mateo Castillo',
+      age: 20,
+      role: 'Desarrollador',
+      study: 'Ingeniería de Ingeniería de Sistemas e IA',
+      image: 'https://static.upao.edu.pe/upload/f1/000258728.jpg'
+    },
   ];
 
 }
