@@ -1,31 +1,28 @@
-<<<<<<< HEAD
-# Govench
+# LinkByte
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.1.
+**LinkByte** es una plataforma web desarrollada con Angular, pensada para una microempresa que busca iniciarse en el mundo digital mediante la organización y publicación de eventos relacionados con la tecnología y el networking. El objetivo es brindar un espacio donde los usuarios puedan explorar eventos, inscribirse y participar en experiencias que impulsen su crecimiento profesional y conexión con otros apasionados del sector.
 
-## Development server
+## Servidor de desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ejecuta `ng serve` para iniciar el servidor de desarrollo. Navega a `http://localhost:4200/`. La aplicación se recargará automáticamente al detectar cambios en los archivos fuente.
 
-## Code scaffolding
+## Generación de componentes
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Usa el comando `ng generate component nombre-del-componente` para generar un nuevo componente. También puedes usar `ng generate directive|pipe|service|class|guard|interface|enum|module` según tus necesidades.
 
-## Build
+## Compilación
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecuta `ng build` para compilar el proyecto. Los archivos generados se almacenarán en el directorio `dist/`.
 
-## Running unit tests
+## Pruebas unitarias
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecuta `ng test` para ejecutar las pruebas unitarias utilizando [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Pruebas end-to-end
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ejecuta `ng e2e` para ejecutar pruebas end-to-end usando una plataforma de tu elección. Para usar este comando, necesitas primero agregar un paquete que implemente capacidades de pruebas E2E.
 
-## Further help
+## Ayuda adicional
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
-=======
-# frontend
->>>>>>> 0e13e8eb6ae5c655c9a8b1d9e033471b2e807089
+Para más ayuda sobre Angular CLI, utiliza el comando `ng help` o visita la [documentación oficial de Angular CLI](https://angular.dev/tools/cli).
+
