@@ -1,0 +1,139 @@
+
+
+            <div class="row">
+                <div class="col-md-1 p-0 text-center" >
+                    <img *ngIf="profileImageUrl; else defaultImage" [src]="profileImageUrl" alt="Profile Image" class="img-thumbnail rounded-circle">
+                        <ng-template #defaultImage>
+                            <img src="https://banffventureforum.com/wp-content/uploads/2019/08/no-photo-icon-22.png" alt="Profile Image" class="img-thumbnail rounded-circle">
+                        </ng-template></div>
+                <div class="col-md-4 p-0 text-center">
+                    <div class="row mt-2">
+                        <p>{{profile.name}} {{profile.lastname}}</p>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>{{profile.seguidores}} Seguidores</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>{{profile.seguidos}} Seguidos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 p-0">
+                    <div class="row mt-2">
+                        <p>{{profile.email}}</p>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p>{{profile.gender}}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p>{{profile.birthday}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2 ">
+                    <br>
+                    <br>
+                    <button class="btn border-primary rounded-pill fw-bold" (click)="navigateToUpdateProfile()">Editar <i class="fa-regular fa-pen-to-square"></i></button>
+                </div>
+            </div>
+            <div class="row mt-2 pt-2">
+                <p>{{profile.profileDesc}}</p>
+            </div>
+            <div class="line p-0">
+                <p class="p-0 border border-dark border-2 opacity-100">
+            </div>
+            <div class="row ms-5">
+                <div class="col">
+                    <p class="fw-bold">Enlaces:</p>
+                    <ul>
+                        <li *ngFor="let link of profile.socialLinks">{{ link }}</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="fw-bold">Habilidades:</p>
+                    <ul>
+                        <li *ngFor="let skill of profile.skills">{{ skill }}</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p class="fw-bold">Intereses:</p>
+                    <ul>
+                        <li *ngFor="let interest of profile.interest">{{ interest }}</li>
+                    </ul>
+                </div>
+            </div>
+
+<button class="btn btn-change-password" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+    <i class="fas fa-key me-2"></i>Cambiar contraseña
+</button>
+
+<div class="modal fade" id="changePasswordModal" tabindex="-1" aria-labelledby="changePasswordModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="changePasswordModalLabel">
+                    <i class="fas fa-lock me-2"></i>Cambiar contraseña
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="passwordForm" (ngSubmit)="updatePassword()">
+                    <div class="mb-3">
+                        <label for="currentPassword" class="form-label">Contraseña actual</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-key"></i></span>
+                            <input type="password" class="form-control" id="currentPassword" formControlName="currentPassword">
+                        </div>
+                        <div *ngIf="passwordForm.get('currentPassword')?.invalid && (passwordForm.get('currentPassword')?.dirty || passwordForm.get('currentPassword')?.touched)" class="text-danger mt-1">
+                            <small *ngIf="passwordForm.get('currentPassword')?.errors?.['required']">La contraseña actual es requerida.</small>
+                            <small *ngIf="passwordForm.get('currentPassword')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres.</small>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">Nueva contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                            <input type="password" class="form-control" id="newPassword" formControlName="newPassword">
+                        </div>
+                        <div *ngIf="passwordForm.get('newPassword')?.invalid && (passwordForm.get('newPassword')?.dirty || passwordForm.get('newPassword')?.touched)" class="text-danger mt-1">
+                            <small *ngIf="passwordForm.get('newPassword')?.errors?.['required']">La nueva contraseña es requerida.</small>
+                            <small *ngIf="passwordForm.get('newPassword')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres.</small>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirmar nueva contraseña</label>
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-check-double"></i></span>
+                            <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword">
+                        </div>
+                        <div *ngIf="passwordForm.get('confirmPassword')?.invalid && (passwordForm.get('confirmPassword')?.dirty || passwordForm.get('confirmPassword')?.touched)" class="text-danger mt-1">
+                            <small *ngIf="passwordForm.get('confirmPassword')?.errors?.['required']">La confirmación de la contraseña es requerida.</small>
+                            <small *ngIf="passwordForm.get('confirmPassword')?.errors?.['minlength']">La contraseña debe tener al menos 8 caracteres.</small>
+                        </div>
+                        <div *ngIf="passwordForm.hasError('passwordMismatch') && (passwordForm.get('confirmPassword')?.dirty || passwordForm.get('confirmPassword')?.touched)" class="text-danger mt-1">
+                            <small>Las contraseñas no coinciden.</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-2"></i>Cancelar
+                </button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="updatePassword()" [disabled]="passwordForm.invalid">
+                    <i class="fas fa-save me-2"></i>Actualizar contraseña
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
