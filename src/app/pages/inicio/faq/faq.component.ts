@@ -19,28 +19,28 @@ export class FAQComponent {
 
   faqItems: FaqItem[] = [
     {
-      question: '¿Qué es Govench?',
-      answer: 'Govench es una plataforma que conecta a profesionales y entusiastas de la tecnología, permitiéndoles participar en eventos, talleres y conferencias del sector tecnológico. También ofrece la posibilidad de organizar eventos propios.',
+      question: '¿Qué es LinkByte?',
+      answer: 'LinkByte es una plataforma diseñada para conectar a profesionales y aficionados de la tecnología, facilitando su participación en eventos, talleres y conferencias del sector. Además, permite la creación de eventos personalizados por los usuarios.',
       isOpen: false
     },
     {
-      question: '¿Cómo puedo participar en un evento?',
-      answer: 'Para participar en un evento, primero debes registrarte en la plataforma. Una vez registrado, puedes explorar los eventos disponibles y inscribirte en aquellos que te interesen.',
+      question: '¿Cómo puedo asistir a un evento en LinkByte?',
+      answer: 'Para asistir a un evento, primero debes registrarte en la plataforma. Luego, podrás explorar la lista de eventos disponibles e inscribirte en aquellos que más te interesen.',
       isOpen: false
     },
     {
-      question: '¿Puedo organizar mi propio evento en Govench?',
-      answer: 'Sí, Govench permite a los usuarios crear y organizar sus propios eventos tecnológicos. Simplemente inicia sesión, ve a la sección de "Crear Evento" y sigue las instrucciones para configurar y publicar tu evento.',
+      question: '¿Puedo crear y organizar mi propio evento en LinkByte?',
+      answer: 'Sí, en LinkByte los usuarios pueden crear y gestionar sus propios eventos tecnológicos. Solo tienes que iniciar sesión, dirigirte a la sección de "Crear Evento" y seguir las instrucciones para configurar y publicar tu evento.',
       isOpen: false
     },
     {
-      question: '¿Es gratuito usar Govench?',
-      answer: 'El registro y el uso básico de Govench son gratuitos. Sin embargo, algunos eventos pueden tener un costo de entrada, que será determinado por los organizadores del evento.',
+      question: '¿Es gratuito utilizar LinkByte?',
+      answer: 'El registro y uso básico de LinkByte son gratuitos. Sin embargo, algunos eventos pueden requerir una cuota de inscripción, que será determinada por los organizadores de cada evento.',
       isOpen: false
     },
     {
-      question: '¿Cómo puedo conectar con otros profesionales en Govench?',
-      answer: 'Govench ofrece funciones de networking que te permiten conectar con otros asistentes durante los eventos. También puedes participar en foros de discusión y grupos temáticos dentro de la plataforma.',
+      question: '¿Cómo puedo conectar con otros profesionales en LinkByte?',
+      answer: 'LinkByte ofrece herramientas de networking que facilitan la conexión entre los participantes durante los eventos. Además, puedes unirte a foros de discusión y grupos temáticos dentro de la plataforma.',
       isOpen: false
     }
   ];
