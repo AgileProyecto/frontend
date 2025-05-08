@@ -1,40 +1,74 @@
-.bg-1 {
-    background: linear-gradient(90deg, #084AAA 0%, #010635 100%);
-}
-
-.input-c {
-    border: 2px solid #084AAA;
-    border-radius: 93px;
-    font-size: 16px;
-}
-
-.subtitle {
-    border-radius: 116px;
-}
-
-#profileDesc {
+.formulario {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .input-c {
+    border: 1.5px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 0.6rem 1rem;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    background: #f9f9f9;
+  }
+  
+  .input-c:focus {
+    outline: none;
+    border-color: #084AAA;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(8, 74, 170, 0.1);
+  }
+  
+  textarea.input-c {
     border-radius: 15px;
-}
-
-.caja {
-    width: 10%;
-    max-width: 60px; 
-    padding: 30px;
-}
-
-.fa-solid {
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.fa-solid:hover {
-    transform: scale(2.2);
-}
-
-#regiterBtn {
+  }
+  
+  #regiterBtn {
     background-color: #084AAA;
     color: #FFF;
-    font-size: 1.2em;
-    transition: background-color 0.3s;
-    width: 20%;
-}
+    font-size: 1.1em;
+    transition: all 0.3s;
+    border: none;
+    box-shadow: 0 5px 10px rgba(8, 74, 170, 0.2);
+  }
+  
+  #regiterBtn:hover {
+    background-color: #06388a;
+    transform: scale(1.03);
+  }
+  
+  label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .alert-danger {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+  }
+  
+  .subtitle h1,
+  .subtitle p {
+    color: #000 !important;
+  }
+  
+  a {
+    color: #084AAA;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #06388a;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
