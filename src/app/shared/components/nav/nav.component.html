@@ -31,6 +31,9 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/inicio/preguntas-respuestas"><i class="fa-solid fa-question"></i> FAQ</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/{{link}}"><i class="fa-solid fa-user"></i>{{data?.name}}</a> 
+          </li>
         </ul>
 
         @if(isAuthenticated==false)
@@ -40,11 +43,9 @@
 
         @else {
            <div class="dropstart">
-            <button class="btn btn-dark btn-outline-white rounded-start-pill dropdown-toggle custom-btn" type="button" data-bs-toggle="dropdown"><i class="fa-solid fa-user"></i>{{data?.name}}</button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" routerLink="/{{link}}">Mi perfil</a></li>
-              <li><a class="dropdown-item" routerLink="auth/login" (click)="logout()">Cerrar sesion</a></li>
-            </ul>
+            <button class="btn btn-dark btn-outline-white rounded-start-pill custom-btn" type="button" data-bs-toggle="dropdown"><a class="dropdown-item" routerLink="auth/login" (click)="logout()">Cerrar sesion</a></button>
+   
+              
           </div>
         }
 
