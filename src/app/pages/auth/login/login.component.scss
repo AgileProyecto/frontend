@@ -1,72 +1,75 @@
-.inicio{
-
-    min-height: 60vh;
-
-}
-
-.espaciado{
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    align-content: center;
-    flex-direction: column;
-}
-
-.bg-1{
-    background: linear-gradient(90deg, #084AAA 0%, #010635 100%);
-}
-
-.input-c{
-    width: 100%; /* Ancho completo */
-    padding: 8px; /* Espaciado interno */
-    border: 2px solid #084AAA; /* Borde transparente inicialmente */
-    border-radius: 50px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño de la fuente */
-}
-
-.subtitle{
-    border-radius: 50px;
-}
-
-/*Caja - espaciado y centrado dinamico para la flecha*/
-
-.caja{
-    width: 10%;
-}
-
-.caja i{
-    font-size: 1.5rem;
-    
-}
-
-.formulario{
-    
-    label{
-        font-size: 24px;
-        color: #084AAA;
-        padding: 10px;
+.formulario {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Segoe UI', sans-serif;
+  
+    label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #333;
+      font-size: 16px;
     }
-
-    .btn{
-        background-color: #084AAA;
-        color: #FFF;
-        border: none;
-        font-size: 20px;
-        transition: background-color 0.3s;
+  
+    .input-c {
+      border: 1.5px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      padding: 0.6rem 1rem;
+      transition: all 0.3s ease-in-out;
+      width: 100%;
+      background: #f9f9f9;
+  
+      &:focus {
+        outline: none;
+        border-color: #084AAA;
+        background: #fff;
+        box-shadow: 0 0 0 3px rgba(8, 74, 170, 0.1);
+      }
     }
-    .btn:hover
-{
-    background-color: #010635;
-    color: #FFF;
-}
-}
-
-.fa-solid {
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.fa-solid:hover {
-    transform: scale(2.2); /* Aumenta el tamaño ligeramente al pasar el cursor */
-}
-
+  
+    .btn-login {
+      background-color: #084AAA;
+      color: #FFF;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 50px;
+      padding: 0.6rem 1rem;
+      transition: all 0.3s;
+      box-shadow: 0 5px 10px rgba(8, 74, 170, 0.2);
+  
+      &:hover {
+        background-color: #06388a;
+        transform: scale(1.03);
+      }
+  
+      &:disabled {
+        background-color: #ccc;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+  }
+  
+  .alert-danger {
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+  }
+  
+  .subtitle h1,
+  .subtitle p {
+    color: #000 !important;
+  }
+  
+  a {
+    color: #084AAA;
+  
+    &:hover {
+      text-decoration: underline;
+      color: #06388a;
+    }
+  }
+  
